@@ -1,0 +1,38 @@
+// Подключение шрифтов
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"),
+        url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+// Адаптивный шрифт
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $mw: $mw - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$mw}));
+}
+
+// Единицы измерения
+// %
+@function prc($pxOne, $pxTwo) {
+    $result: $pxOne / $pxTwo * 100%;
+    @return $result;
+}
+
+// REM
+@function rem($px) {
+    $result: $px / 16+rem;
+    @return $result;
+}
+
+// EM
+@function em($px) {
+    $result: $px / 16+em;
+    @return $result;
+}
