@@ -1,0 +1,156 @@
+.header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    // .header__container
+    &__container {
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    // .header__logo
+    &__logo {
+        font-family: 'Manrope';
+        display: flex;
+        align-items: center;
+
+        span {
+            margin: 0px 0px 0px 8px;
+            font-weight: 600;
+            line-height: calc(20.8/16);
+        }
+    }
+
+    // .header__menu
+    &__menu {
+        margin: 0px 0px 0px prc(116, $mw);
+        flex: 1 1 auto;
+    }
+
+    // .header__tools
+    &__tools {}
+
+    // .header__btn
+    &__btn {}
+}
+
+.menu {
+
+    // .menu__icon
+    &__icon {}
+
+    // .menu__body
+    &__body {}
+
+    // .menu__list
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+
+
+        &>li {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            img {
+                cursor: pointer;
+                padding: 10px 0px 10px 13px;
+            }
+
+            &._active {
+                .sub-menu__list {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+
+    // .menu__link
+    &__link {
+        padding: 10px 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.icon-menu {}
+
+.sub-menu {
+
+
+    // .sub-menu__list
+    &__list {
+        opacity: 0;
+        visibility: visible;
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: -25%;
+        min-width: 210px;
+        padding: 24px;
+        border-radius: 16px;
+        background-color: #fff;
+        box-shadow: 0px 20px 48px rgba(177, 177, 177, 0.4);
+        margin: 16px 0px 0px 0px;
+
+
+
+        &>li {
+            &:not(:last-child) {
+                margin: 0px 0px 15px 0px;
+            }
+        }
+    }
+
+    // .sub-menu__link
+    &__link {
+        font-size: 17px;
+        line-height: calc(25.5/17);
+        letter-spacing: 1%;
+        color: $black;
+        font-weight: 500;
+
+        &:hover {
+            color: #1749b3;
+        }
+    }
+}
+
+.tools-header {
+
+    // .tools-header__social
+    &__social {}
+
+    // .tools-header__language
+    &__language {}
+}
+
+.social-tools-header {
+
+    // .social-tools-header__watsup
+    &__watsup {}
+}
+
+.header-language {
+
+    // .header-language__list
+    &__list {}
+
+    // .header-language__link
+    &__link {}
+}
+
+
+
+.btn-login {}

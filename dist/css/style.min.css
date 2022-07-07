@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Manrope:600&display=swap&subset=cyrillic-ext");
+@font-face {
+  font-family: "gothampro";
+  font-display: swap;
+  src: url("../fonts/gothampro.woff") format("woff"), url("../fonts/gothampro.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "gothampro";
+  font-display: swap;
+  src: url("../fonts/gothampro_medium.woff") format("woff"), url("../fonts/gothampro_medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "gothampro";
+  font-display: swap;
+  src: url("../fonts/gothampro_bold.woff") format("woff"), url("../fonts/gothampro_bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "gothampro";
+  font-display: swap;
+  src: url("../fonts/gothampro_black.woff") format("woff"), url("../fonts/gothampro_black.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-family: "gothampro";
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+[class*=__container] {
+  max-width: 1200px;
+  padding: 0 15px;
+  box-sizing: content-box;
+  margin: 0 auto;
+}
+
+._ibg {
+  position: relative;
+}
+
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+a {
+  color: #333;
+}
+
+body {
+  color: #171717;
+  font-size: 16px;
+  background-color: #ECF3FB;
+}
+body._lock {
+  overflow: hidden;
+}
+
+.header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header__container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  font-family: "Manrope";
+  display: flex;
+  align-items: center;
+}
+.header__logo span {
+  margin: 0px 0px 0px 8px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.header__menu {
+  margin: 0px 0px 0px 9.6666666667%;
+  flex: 1 1 auto;
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+.menu__list > li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.menu__list > li img {
+  cursor: pointer;
+  padding: 10px 0px 10px 13px;
+}
+.menu__list > li._active .sub-menu__list {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.menu__link {
+  padding: 10px 0;
+}
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+.sub-menu__list {
+  opacity: 0;
+  visibility: visible;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: -25%;
+  min-width: 210px;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0px 20px 48px rgba(177, 177, 177, 0.4);
+  margin: 16px 0px 0px 0px;
+}
+.sub-menu__list > li:not(:last-child) {
+  margin: 0px 0px 15px 0px;
+}
+.sub-menu__link {
+  font-size: 17px;
+  line-height: 1.5;
+  letter-spacing: 1%;
+  color: #171717;
+  font-weight: 500;
+}
+.sub-menu__link:hover {
+  color: #1749b3;
+}
+
+.btn {
+  font-size: 17px;
+  line-height: 1.2941176471;
+  font-weight: 700;
+  color: #fff;
+  padding: 8px 40px;
+  background-color: #1749B3;
+  border-radius: 12px;
+  border: 2px solid #1749B3;
+  transition: all 0.2s ease 0s;
+}
+.btn:hover {
+  background-color: transparent;
+  color: #1749B3;
+}
