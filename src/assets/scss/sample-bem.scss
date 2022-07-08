@@ -14,3 +14,78 @@
         color: #1749B3;
     }
 }
+
+// link popup
+.link {
+    display: flex;
+    transition: all .3s ease 0s;
+
+    span {
+        padding: 0px 10px 0px 0px;
+    }
+
+    &:hover {
+        color: $blue;
+    }
+
+    // .link__name
+    &__name {}
+
+    // .link__arrow
+    &__arrow {
+        transition: all .3s ease 0s;
+
+        &._active {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.popup__cnt {
+    position: relative;
+
+    &._active {
+        .popup__body {
+            visibility: visible;
+            pointer-events: all;
+            opacity: 1;
+            transform: translate(0px, 0px);
+        }
+    }
+}
+
+.popup__body {
+    margin: 12px 0px 0px 0px;
+    position: absolute;
+    top: 100%;
+    left: -15%;
+    // min-width: 205px;
+    width: auto;
+    white-space: nowrap;
+    background-color: #fff;
+    padding: 27px 23px;
+    border-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(0px, 10%);
+    transition: all .3s ease 0s;
+
+    li {
+        &:not(:last-child) {
+            margin: 0px 0px 10px 0px;
+        }
+    }
+
+    a {
+        font-size: 17px;
+        line-height: calc(25.5/17);
+        letter-spacing: 1%;
+        color: $black;
+        font-weight: 500;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}

@@ -13,12 +13,12 @@
         <!-- Header -->
         <header class="header">
     <div class="header__container">
-        <!-- header-logo -->
-        <a href="#" class="header__logo">
-            <img src="./img/header/logo.svg" alt="Логотип"/>
+        <!-- hd-logo -->
+        <a href="#" class="header__logo"
+            ><img src="./img/header/logo.svg" alt="Логотип" />
             <span>DiscountsOnServices</span>
         </a>
-        <!-- header-menu -->
+        <!-- hd-menu -->
         <div class="header__menu menu">
             <div class="menu__icon icon-menu">
                 <span></span>
@@ -27,20 +27,20 @@
             </div>
             <nav class="menu__body">
                 <ul class="menu__list">
-                    <li>
-                        <a href="" class="menu__link">Subscriptions</a>
-                        <img src="./img/header/arrow-down.svg" alt="" />
-                        <ul class="sub-menu__list">
+                    <li class="popup__cnt">
+                        <a href="#" class="menu__link link">
+                            <span class="link__name">Subscriptions</span>
+                            <img src="./img/header/arrow-down.svg" alt="" class="link__arrow" />
+                        </a>
+                        <ul class="menu__sub-list popup__body">
                             <li>
-                                <a href="#" class="sub-menu__link">Netflix</a>
+                                <a href="#" class="menu__sub-link">Netflix</a>
                             </li>
                             <li>
-                                <a href="#" class="sub-menu__link"
-                                    >YouTube Premium</a
-                                >
+                                <a href="#" class="menu__sub-link">YouTube Premium</a>
                             </li>
                             <li>
-                                <a href="#" class="sub-menu__link">Spotify</a>
+                                <a href="#" class="menu__sub-link">Spotify</a>
                             </li>
                         </ul>
                     </li>
@@ -50,26 +50,31 @@
                 </ul>
             </nav>
         </div>
-        <!-- header-tools -->
+        <!-- hd-tools -->
         <div class="header__tools tools-header">
-            <div class="tools-header__social social-tools-header">
-                <img src="./img/header/watsup.svg" class="social-tools-header__watsup"></img>
-                <img src="./img/header/telegram.svg" class="social-tools-header__watsup"></img>
+            <!-- social -->
+            <div class="tools-header__social social-header">
+                <div class="social-header__watsup"><img src="./img/header/watsup.svg" alt="" /></div>
+                <div class="social-header__telegram"><img src="./img/header/telegram.svg" alt="" /></div>
             </div>
-            <div class="tools-header__language header-language">
-                <span>EN</span>
-                <span><img src="./img/header/arrow-down.svg" alt=""></span>
-                <ul class="header-language__list">
-                    <li><a href="#" class="header-language__link">English</a></li>
-                    <li><a href="#" class="header-language__link">Ukraine</a></li>
-                    <li><a href="#" class="header-language__link">Russian</a></li>
+            <!-- language -->
+            <div class="tools-header__language language popup__cnt">
+                <a href="#" class="language__link link">
+                    <span>EN</span>
+                    <img src="./img/header/arrow-down.svg" alt="" class="link__arrow" />
+                </a>
+                <ul class="language__list popup__body">
+                    <li><a href="#" class="language__link">English</a></li>
+                    <li><a href="#" class="language__link">Ukraine</a></li>
+                    <li><a href="#" class="language__link">Russian</a></li>
                 </ul>
             </div>
         </div>
-        <!-- header-btn -->
-        <a href="#" class="header__btn btn btn-login">Log in</a>
+        <!-- hd-button -->
+        <a href="#" class="header__btn btn btn_login">Log in</a>
     </div>
 </header>
+
 
         <main>
         </main>
